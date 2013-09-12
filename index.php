@@ -16,13 +16,13 @@
         $str = file_get_contents( 'http://www.gravatar.com/46ab91522a3d3ea8fbb59831aecfb479.php' );
         $profile = unserialize( $str );
         if ( is_array( $profile ) && isset( $profile['entry'] ) ){
-                echo $profile['entry'][0]['displayName'];
+                echo $profile['entry'][0]['displayName'];   //Displaying My name
                 echo "<br/>";
-                echo $profile['entry'][0]['emails'][0]['value'];
+                echo $profile['entry'][0]['emails'][0]['value'];    //Displaying my email
                 echo "<br/>";
                 echo $profile['entry'][0]['ims'][0]['value'];
                 echo "<br/>";
-                
+                print_r($profile); //Printing Keys in the $profile array
                 
                 
         }
